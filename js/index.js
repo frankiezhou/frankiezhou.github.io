@@ -1,6 +1,5 @@
 $(function(){	 
-	var viewport = $(window).width();
-	
+	var viewport = $(window).width();	
 	$('#fullpage').fullpage({
 		scrollingSpeed: 300,
 		css3: true,
