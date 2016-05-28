@@ -384,6 +384,7 @@ $(function(){
 	    			$('#nav .bar').css({opacity:1});
 	    			$('#nav,#logo').show();
 	    			$('.toggle').hide();
+	    			
 	    		}else if(viewport<=960){
 	    			$('#contact .title').animate({marginTop:'8rem'},800,function(){
 						$('#contact .title i').addClass('animated flipped-horizontal-right');
