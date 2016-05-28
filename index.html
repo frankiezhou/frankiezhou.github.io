@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content="width=device-width, initial-scale=1,user-scalable=no"/>
+	<title>周凡淇的个人主页</title>
+<link rel="stylesheet" href="css/common.css"/>
+<link rel="stylesheet" href="css/anim.css"/>
+<link rel="shortcut icon" href="img/favicon.ico"/>
+<style>
+
+</style>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script src="js/index.js"></script>
+</head>
+<body>
+<div class="nav clearfix" id="nav">
+	<div class="bar"></div>
+	<div class="logo" id="logo">
+		<i></i>
+	</div>
+	<ul>
+		<li class="first"><span class="selected"></span><a href="#page1">首页</a></li>
+		<li><a href="#page2">个人技能</a></li>
+		<li><a href="#page3">项目经验</a></li>
+		<li><a href="#page4">效果展示</a></li>
+		<li><a href="#page5">与我联系</a></li>
+		<li id="bg"></li>
+	</ul>
+</div>
+<div class="subnav" id="subnav">
+	<ul>
+		<li class="cur"><a href="#page1"></a></li>
+		<li><a href="#page2"></a></li>
+		<li><a href="#page3"></a></li>
+		<li><a href="#page4"></a></li>
+		<li><a href="#page5"></a></li>
+	</ul>
+</div>
+<div id="fullpage">
+	<div class="toggle">
+		<img src="img/down.gif" alt="next"/>
+	</div>
+	<div class="section" data-anchor="page1">
+		<div id="mask">
+			<img src="img/preloader.gif" alt="Please Wait..."/>
+		</div>
+		<div>
+			<img id="preload"/>
+		</div>
+		<div id="home">
+			<div id="home_content">
+				<div id="intro">
+					<div id="photo">
+						<img src="img/icon.png" alt=""/>
+					</div>
+					<p class="wel">你好!欢迎访问周凡淇的个人主页</p>
+				</div>				
+				<div id="desk" class="desk">
+					<div id="writeword" class="writeword">"Keep your dreams alive. Understand to achieve anything requires faith and belief in yourself. Remember all things are possible for those who believe."</div>
+				</div>				
+			</div>
+		</div>		
+	</div>
+	<div class="section" data-anchor="page2">
+		<div id="skill">
+			<div id="skill_content">
+				<a href="javascript:;" id="prev"></a>
+				<a href="javascript:;" id="next"></a>	
+				<div class="skills">					
+					<div class="title">
+						<i class="html"></i>
+						<span class="name">HTML</span>
+						<div class="line"></div>
+					</div>
+					<div id="circle1" class="circle">
+						<strong></strong>
+					</div>					
+					<ul class="desc desc1">
+						<li>• 对Web标准和标签语义化有深入理解</li>
+						<li>• 掌握DIV+CSS页面架构和布局方式</li>
+						<li></li>
+					</ul>
+				</div>				
+				<div class="skills">
+					<div class="title">
+						<i class="css"></i>
+						<span class="name">CSS</span>
+						<div class="line"></div>
+					</div>
+					<div id="circle2" class="circle">
+						<strong></strong>
+					</div>
+					<ul class="desc desc2">
+						<li>• 熟练运用css创建网页样式</li>
+						<li>• 对主流浏览器的兼容性有一定了解，熟悉css hack</li>
+						<li>• 熟悉Bootstrap框架及源码的实现</li>
+						<li>• 熟悉css预编译器Less及Sass</li>
+					</ul>			
+				</div>
+				<div class="skills">
+					<div class="title">
+						<i class="js"></i>
+						<span class="name">Javascript</span>
+						<div class="line"></div>
+					</div>
+					<div id="circle3" class="circle">
+						<strong></strong>
+					</div>
+					<ul class="desc desc3">
+						<li>• 对javascript基础知识的掌握，包括面向对象概念以及DOM/BOM操作</li>
+						<li>• 掌握jQuery等类库及其应用</li>
+						<li>• 掌握ajax,jsonp的运作原理及json数据结构</li>
+						<li>• 注重Javascript性能优化</li>
+					</ul>
+				</div>
+			</div>	
+		</div>
+	</div>
+	<div class="section" data-anchor="page3">
+		<div id="exp">
+			<div id="exp_content">
+				<div class="title">
+					<i></i>
+					<span class="name">项目经验</span>
+					<div class="line"></div>
+				</div>
+				<div id="focus_Box">
+					<ul class="d_img">				 
+						<li class="d_pos1"><img src="img/aitaobao.png" alt=""/><div class="cont"><span>爱淘宝移动端</span></div></li>
+						<li class="d_pos2"><img src="img/juxia.png" alt=""/><div class="cont"><span>聚侠网</span></div></li>
+						<li class="d_pos3"><img src="img/mi.png" alt=""/><div class="cont"><span>小米官网</span></div></li>
+						<li class="d_pos4"><img src="img/meilishuo.png" alt=""/><div class="cont"><span>美丽说官网</span></div></li>
+						<li class="d_pos5"><img src="img/chexun.png" alt=""/><div class="cont"><span>车讯网</span></div></li>
+						<li><img src="img/273che.png"><div class="cont"><span>273二手车交易网</span></div></li>
+					</ul>	
+					<p class="d_prev"><img src="img/prev.png" alt=""></p>
+					<p class="d_next"><img src="img/next.png" alt=""></p>				
+				</div>		
+		    </div>
+		</div>
+	</div>	
+	<div class="section" data-anchor="page4">
+		<div id="demo">
+			<div id="demo_content">
+				<div class="title">
+					<i></i>
+					<span class="name">效果展示</span>
+					<div class="line"></div>
+				</div>
+				<ul class="d_list" id="d_list">
+					<li class="item">
+						<div>JS应用</div>
+						<a href="html/shoufengqin.html" target="_blank">
+							<h3>手风琴</h3>
+							<span>焦点图</span>
+						</a>	
+					</li>
+					<li class="item">
+						<div>JS应用</div>
+						<a href="html/photowall.html" target="_blank">
+							<h3>App</h3>
+							<span>照片墙</span>
+						</a>
+					</li>
+					<li class="item">
+						<div>JS应用</div>
+						<a href="html/zoom.html" target="_blank">
+							<h3>购物</h3>
+							<span>放大镜</span>
+						</a>
+					</li>
+					<li class="item">
+						<div>JS应用</div>
+						<a href="html/appleicon.html" target="_blank">
+							<h3>苹果</h3>
+							<span>菜单</span>
+						</a>
+					</li>
+					<li class="item">
+						<div>JS应用</div>
+						<a href="html/picdrag.html" target="_blank">
+							<h3>拖拽</h3>
+							<span>照片墙</span>
+						</a>
+					</li>
+					<li class="item">
+						<div>JS应用</div>
+						<a href="html/ball.html" target="_blank">
+							<h3>弹力</h3>
+							<span>铁球</span>
+						</a>
+					</li>
+					<li class="item">
+						<div>JS应用</div>
+						<a href="html/circlemove.html" target="_blank">
+							<h3>圆心</h3>
+							<span>运动</span>
+						</a>
+					</li>
+					<li class="item">
+						<div>JS应用</div>
+						<a href="html/picswitch.html" target="_blank">
+							<h3>图片</h3>
+							<span>切换</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>	
+	<div class="section" data-anchor="page5">
+		<div id="contact">
+			<div id="contact_content">
+				<div class="title">
+					<i></i>
+					<span class="name">与我联系</span>
+					<div class="line"></div>
+				</div>
+				<div id="me">
+					<div class="p1">
+						<p>IT行业的学习需要持之以恒的态度，让自己热衷于接触日新月异的web前沿技术，不断提升改变，使成果更贴近用户期待，这是一个前端工程师的终极追求。</p><br/>
+						<p>我，<span>周凡淇</span>，性格沉稳，做事专注细心，责任心强，正努力奔跑在前端这条道路上，希望与你相识。</p><br/>
+						<p>行路有良师益友，便是捷径，与其同行，去遍览更大更广阔的世界！</p>
+						<ul>
+							<li><span><img src="img/phone.png"/></span><em>电话: 18551027068</em></li>
+							<li><span class="qq"><img src="img/qq.png"/></span><em>QQ: 418205066</em></li>
+							<li><span class="mail"><img src="img/mail.png"/></span><em>邮箱: <a href="mailto:frankiezhou7@163.com">frankiezhou7@163.com</a></em></li>
+						</ul>				
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>			
+</div>
+
+</body>
+</html>

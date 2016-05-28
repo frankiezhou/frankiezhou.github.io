@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>苹果菜单效果</title>
+<style>
+html {overflow: hidden;}
+#div1 {width:100%;text-align: center;position: absolute;bottom:0;}
+img {height:64px;}
+</style>
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById('div1');
+	var aImg = oDiv.getElementsByTagName('img');
+
+	document.onmousemove = function(ev){
+		var oEvent = ev || event;
+		var x2 = oEvent.clientX;
+		var y2 = oEvent.clientY;
+		for (var i = 0; i < aImg.length; i++) {
+			var x1 = aImg[i].offsetLeft + aImg[i].offsetWidth/2;
+			var y1 = aImg[i].offsetTop + aImg[i].offsetHeight/2 + oDiv.offsetTop;
+
+			var a = x2-x1;
+			var b = y2-y1;
+
+			var dis = Math.sqrt(a*a + b*b);
+
+			var scale = 1 - dis/200;
+			scale <0.5 &&(scale=0.5);
+
+			aImg[i].style.width = 128 * scale + "px";
+			aImg[i].style.height = 128 * scale + "px";
+		}
+	}
+
+	
+	
+};
+</script>
+</head>
+<body>
+<div id="div1">
+	<img src="../img/images/1.png" />
+	<img src="../img/images/2.png" />
+	<img src="../img/images/3.png" />
+	<img src="../img/images/4.png" />
+	<img src="../img/images/5.png" />
+</div>	
+</body>
+</html>
