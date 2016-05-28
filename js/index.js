@@ -185,7 +185,7 @@ $(function(){
     			}else if(viewport<=960){
     				$('#skill_content').css({width:$(window).width()+'px'});
     				$('#nav li').eq(1).addClass('active').siblings().removeClass('active');
-    				$('#skill .title').animate({marginTop:'-40px'},800,function(){
+    				$('#skill .title').animate({marginTop:'-35px'},800,function(){
 						$(this).find('i').addClass('animated flipped-horizontal-right');
 				      	$(this).find('i').on('transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd', function() { 
 					        $(this).removeClass('animated flipped-horizontal-right');
@@ -260,7 +260,7 @@ $(function(){
     			}else if(viewport<=960){
     				$('#exp_content').css({width:$(window).width()+'px'});
     				$('#nav li').eq(2).addClass('active').siblings().removeClass('active');
-    				$('#exp .title').animate({marginTop:'8rem'},800,function(){
+    				$('#exp .title').animate({marginTop:'9rem'},800,function(){
 						$(this).find('i').addClass('animated flipped-horizontal-right');
 				      	$(this).find('i').on('transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd', function() { 
 					        $(this).removeClass('animated flipped-horizontal-right');
@@ -341,7 +341,7 @@ $(function(){
     				$('#d_list .item div').html('');
     				$('#demo_content').css({width:$(window).width()+'px'});
     				$('#nav li').eq(3).addClass('active').siblings().removeClass('active');
-    				$('#demo .title').animate({marginTop:'8rem'},800,function(){
+    				$('#demo .title').animate({marginTop:'9rem'},800,function(){
 						$(this).find('i').addClass('animated flipped-horizontal-right');
 				      	$(this).find('i').on('transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd', function() { 
 					        $(this).removeClass('animated flipped-horizontal-right');
@@ -384,9 +384,9 @@ $(function(){
 	    			$('#nav .bar').css({opacity:1});
 	    			$('#nav,#logo').show();
 	    			$('.toggle').hide();
-	    			
+
 	    		}else if(viewport<=960){
-	    			$('#contact .title').animate({marginTop:'8rem'},800,function(){
+	    			$('#contact .title').animate({marginTop:'9rem'},800,function(){
 						$('#contact .title i').addClass('animated flipped-horizontal-right');
 					      	$('#contact .title i').on('transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd', function() { 
 						        $(this).removeClass('animated flipped-horizontal-right');
