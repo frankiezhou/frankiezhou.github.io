@@ -127,7 +127,7 @@ html { overflow-x: hidden; overflow-y:hidden;font-size:62.5%;}
 #next {background: url(../img/next.png) no-repeat;right:2.5rem;z-index:100;}
 #skill_content {padding-top: 12rem;}
 .skills {float: left;width:310px;height:430px;position: relative;}
-.skills .title {width:260px;height:70px;margin: -140px auto 0;}
+.skills .title {width:260px;height:70px;margin: -100px auto 0;}
 .skills .name {color:#fff;font: bold 36px "\5fae\8f6f\96c5\9ed1";display: inline-block;vertical-align: 16px;}
 .skills i,#exp .title i,#demo .title i,#contact i {width:64px;height:64px;display: inline-block;}
 .skills i.html {background: url(../img/script.png) no-repeat;margin-left: 45px;}

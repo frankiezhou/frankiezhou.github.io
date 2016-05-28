@@ -14,7 +14,7 @@ $(function(){
     			$('#preload').attr('src', 'img/page1.jpg').load(function() {
 				   $(this).remove();
 				   $('#home').css('background-image', 'url(img/page1.jpg)');
-					$('#mask').delay(1000).animate({opacity:0},30,function(){
+					$('#mask').delay(1000).animate({opacity:0},1000,function(){
 						$('#mask').hide(function(){
 							$.fn.fullpage.setMouseWheelScrolling(true);
 		    				$.fn.fullpage.setAllowScrolling(true);			
@@ -41,7 +41,7 @@ $(function(){
 				$('#preload').attr('src', 'img/page1.jpg').load(function() {
 				   $(this).remove();
 				   $('#home').css('background-image', 'url(img/page1.jpg)');
-				   $('#mask').delay(1000).animate({opacity:0},30,function(){
+				   $('#mask').delay(1000).animate({opacity:0},1000,function(){
 						$('#mask').hide(function(){
 							$.fn.fullpage.setMouseWheelScrolling(true);
 		    				$.fn.fullpage.setAllowScrolling(true);			
@@ -260,7 +260,7 @@ $(function(){
     			}else if(viewport<=960){
     				$('#exp_content').css({width:$(window).width()+'px'});
     				$('#nav li').eq(2).addClass('active').siblings().removeClass('active');
-    				$('#exp .title').animate({marginTop:'7rem'},800,function(){
+    				$('#exp .title').animate({marginTop:'8rem'},800,function(){
 						$(this).find('i').addClass('animated flipped-horizontal-right');
 				      	$(this).find('i').on('transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd', function() { 
 					        $(this).removeClass('animated flipped-horizontal-right');
@@ -341,7 +341,7 @@ $(function(){
     				$('#d_list .item div').html('');
     				$('#demo_content').css({width:$(window).width()+'px'});
     				$('#nav li').eq(3).addClass('active').siblings().removeClass('active');
-    				$('#demo .title').animate({marginTop:'7rem'},800,function(){
+    				$('#demo .title').animate({marginTop:'8rem'},800,function(){
 						$(this).find('i').addClass('animated flipped-horizontal-right');
 				      	$(this).find('i').on('transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd', function() { 
 					        $(this).removeClass('animated flipped-horizontal-right');
@@ -385,7 +385,7 @@ $(function(){
 	    			$('#nav,#logo').show();
 	    			$('.toggle').hide();
 	    		}else if(viewport<=960){
-	    			$('#contact .title').animate({marginTop:'7rem'},800,function(){
+	    			$('#contact .title').animate({marginTop:'8rem'},800,function(){
 						$('#contact .title i').addClass('animated flipped-horizontal-right');
 					      	$('#contact .title i').on('transitionend webkitTransitionEnd MSTransitionEnd oTransitionEnd', function() { 
 						        $(this).removeClass('animated flipped-horizontal-right');
