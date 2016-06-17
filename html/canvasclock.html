@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas时钟</title>
+<style>
+body{background:#000;}
+#box{width:800px;height:500px;position: absolute;left:50%;top:50%;margin-left: -400px;margin-top: -250px;}
+#c1{background:#fff;}
+#btn1 {position: absolute;z-index: 2;left:0;top:0;}
+</style>
+<script>
+function d2a(n){
+	return n*Math.PI/180;
+}
+function addZero(n){
+	return n < 10 ? "0" + n: "" + n;
+}
+
+window.onload = function(){
+	
+	var oC = document.getElementById("c1");
+ 	var gd = oC.getContext("2d");
+	 
+	var cx = 400;
+	var cy = 250;
+	
+	
+	setInterval(function(){
+		gd.clearRect(0,0,oC.width,oC.height);
+		var oDate = new Date();
+		var iH = oDate.getHours();
+		var iM = oDate.getMinutes();
+		var iS = oDate.getSeconds();
+		var iMs = oDate.getMilliseconds();
+		
+		drawArc(cx,cy,80,0,iH%12*30 + iM/60*30,"pink");
+		drawArc(cx,cy,100,0,iM*6 + iS/60*6,"orange");
+		drawArc(cx,cy,120,0,iS*6 + iMs/1000*6,"#ccc");
+	
+		
+		var str = [addZero(iH),addZero(iM),addZero(iS)].join(":");
+		var h = 30;
+		gd.font = "bold " +h + "px kaiti";
+		var w = gd.measureText(str).width;
+		
+		gd.fillText(str,cx - w/2,cy + h/2);
+		
+	},16);
+
+	function drawArc(cx,cy,r,start,end,color){
+		
+		start -= 90;
+		end -= 90;
+		
+		gd.beginPath();
+		gd.lineWidth = "20";
+		gd.strokeStyle = color;
+		gd.arc(cx,cy,r,d2a(start),d2a(end),false);
+		gd.stroke();
+		 
+	}
+
+	
+	
+	var oBtn = document.getElementById("btn1");
+	oBtn.onclick = function(){
+
+		var str = oC.toDataURL("image/gif");
+		
+		window.open(str);
+	};
+};
+</script>
+</head>
+<body>
+<div id="box">
+	<canvas id="c1" width="800" height="500">
+	</canvas>
+	<input id="btn1" type="button" value="拍照">	
+</div>
+</body>
+</html>

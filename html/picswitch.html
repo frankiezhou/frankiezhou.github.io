@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片切换特效</title>
+<style>
+#btn1 {position:absolute;top:-22px;}
+.box {position: relative;width:700px; height:400px;margin:100px auto;}
+#div1{ position:relative;width:700px; height:400px;border:1px solid #000;  background:url(../img/images/12.jpg)  no-repeat;}
+#div1 span{ position:absolute;left:0;top:0;width:100px; height:100px; background:url(../img/images/11.jpg) no-repeat;
+	background-position:0 0; line-height:100px; text-align:center; font-size:30px; color:#fff;
+}
+</style>
+<script src="../js/index.js"></script>
+<script>
+window.onload = function(){
+	var oDiv = document.getElementById("div1");
+	
+	var R = 4
+	var C = 7
+	
+	for(var r = 0; r < R; r++){
+		for(var c = 0; c < C; c++){
+			var oSpan = document.createElement("span");
+			oDiv.appendChild(oSpan);
+			oSpan.style.width = oDiv.offsetWidth/C + "px";
+			oSpan.style.height = oDiv.offsetHeight/R + "px";
+			
+			oSpan.style.left = oSpan.offsetWidth*c + "px";
+			oSpan.style.top  = oSpan.offsetHeight*r + "px";
+			
+			oSpan.style.backgroundPosition = -oSpan.offsetLeft+"px -" + oSpan.offsetTop + "px";
+			oSpan.r = r;
+			oSpan.c = c;		
+		}
+	}
+	
+	var oBtn = document.getElementById("btn1");
+	var aSpan = oDiv.children;
+	
+	var iNow = 11;
+	var bReady = true;
+	oBtn.onclick = function(){
+		if(!bReady) return;
+		bReady = false;
+		
+		for(var i = 0; i < aSpan.length; i++){
+			aSpan[i].style.opacity = "1";
+			aSpan[i].style.backgroundImage = "url(../img/images/"+iNow+".jpg)";
+		}
+		
+		iNow++;
+		if(iNow == 14){
+			iNow = 11;
+		}
+
+		oDiv.style.backgroundImage = "url(../img/images/"+iNow+".jpg)";
+		
+		 var count = 0;
+		 for(var i = 0; i < aSpan.length; i++){
+			(function(index){
+				setTimeout(function(){
+					move(aSpan[index],{opacity:0},{
+						complete:function(){
+							count++;
+							if(count == aSpan.length - 1){
+								bReady = true;
+							}	
+						}	
+					});	
+				},700*Math.random()); 
+			})(i);
+	     } 
+	};
+};
+</script>
+</head>
+
+<body>
+<div class="box">
+	<div id="div1">	
+	</div>
+	<input id="btn1" type="button" value="下一张" />
+</div>
+</body>
+</html>
